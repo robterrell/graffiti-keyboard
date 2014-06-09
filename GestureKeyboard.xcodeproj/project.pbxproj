@@ -12,6 +12,18 @@
 		D460B2BD1943CF7600A5D298 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D460B2BB1943CF7600A5D298 /* Main.storyboard */; };
 		D460B2BF1943CF7600A5D298 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D460B2BE1943CF7600A5D298 /* Images.xcassets */; };
 		D460B2CB1943CF7700A5D298 /* GestureKeyboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D460B2CA1943CF7700A5D298 /* GestureKeyboardTests.swift */; };
+		D460B2E01944C09900A5D298 /* CMUnistrokeGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = D460B2D71944C09900A5D298 /* CMUnistrokeGestureRecognizer.m */; };
+		D460B2E11944C09900A5D298 /* CMUnistrokeGestureResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D460B2D91944C09900A5D298 /* CMUnistrokeGestureResult.m */; };
+		D460B2E21944C09900A5D298 /* CMUnistrokeRecognizer.c in Sources */ = {isa = PBXBuildFile; fileRef = D460B2DB1944C09900A5D298 /* CMUnistrokeRecognizer.c */; };
+		D460B2E31944C09900A5D298 /* CMUnistrokeRecognizerTypes.c in Sources */ = {isa = PBXBuildFile; fileRef = D460B2DE1944C09900A5D298 /* CMUnistrokeRecognizerTypes.c */; };
+		D460B2E81944D69900A5D298 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D460B2E71944D69900A5D298 /* Foundation.framework */; };
+		D460B2EA1944D6A100A5D298 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D460B2E91944D6A100A5D298 /* GLKit.framework */; };
+		D460B2EC1944D6A600A5D298 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D460B2EB1944D6A600A5D298 /* UIKit.framework */; };
+		D460B2EE1944D6F300A5D298 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D460B2ED1944D6F300A5D298 /* CoreGraphics.framework */; };
+		D49E3281194528EE001B9BB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D460B2E71944D69900A5D298 /* Foundation.framework */; };
+		D49E3282194528F2001B9BB1 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D460B2E91944D6A100A5D298 /* GLKit.framework */; };
+		D49E3283194528F5001B9BB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D460B2EB1944D6A600A5D298 /* UIKit.framework */; };
+		D49E3284194528FA001B9BB1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D460B2ED1944D6F300A5D298 /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +46,21 @@
 		D460B2C41943CF7700A5D298 /* GestureKeyboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GestureKeyboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D460B2C91943CF7700A5D298 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D460B2CA1943CF7700A5D298 /* GestureKeyboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureKeyboardTests.swift; sourceTree = "<group>"; };
+		D460B2D51944C09900A5D298 /* CMUnistrokeGestureRecognizer-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CMUnistrokeGestureRecognizer-Prefix.pch"; sourceTree = "<group>"; };
+		D460B2D61944C09900A5D298 /* CMUnistrokeGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMUnistrokeGestureRecognizer.h; sourceTree = "<group>"; };
+		D460B2D71944C09900A5D298 /* CMUnistrokeGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMUnistrokeGestureRecognizer.m; sourceTree = "<group>"; };
+		D460B2D81944C09900A5D298 /* CMUnistrokeGestureResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMUnistrokeGestureResult.h; sourceTree = "<group>"; };
+		D460B2D91944C09900A5D298 /* CMUnistrokeGestureResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMUnistrokeGestureResult.m; sourceTree = "<group>"; };
+		D460B2DB1944C09900A5D298 /* CMUnistrokeRecognizer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CMUnistrokeRecognizer.c; sourceTree = "<group>"; };
+		D460B2DC1944C09900A5D298 /* CMUnistrokeRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMUnistrokeRecognizer.h; sourceTree = "<group>"; };
+		D460B2DD1944C09900A5D298 /* CMUnistrokeRecognizerPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMUnistrokeRecognizerPrivate.h; sourceTree = "<group>"; };
+		D460B2DE1944C09900A5D298 /* CMUnistrokeRecognizerTypes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CMUnistrokeRecognizerTypes.c; sourceTree = "<group>"; };
+		D460B2DF1944C09900A5D298 /* CMUnistrokeRecognizerTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMUnistrokeRecognizerTypes.h; sourceTree = "<group>"; };
+		D460B2E61944D35A00A5D298 /* GestureKeyboard-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GestureKeyboard-Bridging-Header.h"; path = "../CMUnistrokeGestureRecognizer/GestureKeyboard-Bridging-Header.h"; sourceTree = "<group>"; };
+		D460B2E71944D69900A5D298 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D460B2E91944D6A100A5D298 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		D460B2EB1944D6A600A5D298 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D460B2ED1944D6F300A5D298 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +68,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D460B2E81944D69900A5D298 /* Foundation.framework in Frameworks */,
+				D460B2EE1944D6F300A5D298 /* CoreGraphics.framework in Frameworks */,
+				D460B2EC1944D6A600A5D298 /* UIKit.framework in Frameworks */,
+				D460B2EA1944D6A100A5D298 /* GLKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +79,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D49E3284194528FA001B9BB1 /* CoreGraphics.framework in Frameworks */,
+				D49E3282194528F2001B9BB1 /* GLKit.framework in Frameworks */,
+				D49E3283194528F5001B9BB1 /* UIKit.framework in Frameworks */,
+				D49E3281194528EE001B9BB1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +92,11 @@
 		D460B2A91943CF7600A5D298 = {
 			isa = PBXGroup;
 			children = (
+				D460B2ED1944D6F300A5D298 /* CoreGraphics.framework */,
+				D460B2EB1944D6A600A5D298 /* UIKit.framework */,
+				D460B2E91944D6A100A5D298 /* GLKit.framework */,
+				D460B2E71944D69900A5D298 /* Foundation.framework */,
+				D460B2D41944C09900A5D298 /* CMUnistrokeGestureRecognizer */,
 				D460B2B41943CF7600A5D298 /* GestureKeyboard */,
 				D460B2C71943CF7700A5D298 /* GestureKeyboardTests */,
 				D460B2B31943CF7600A5D298 /* Products */,
@@ -75,6 +115,7 @@
 		D460B2B41943CF7600A5D298 /* GestureKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				D460B2E61944D35A00A5D298 /* GestureKeyboard-Bridging-Header.h */,
 				D460B2B71943CF7600A5D298 /* AppDelegate.swift */,
 				D460B2B91943CF7600A5D298 /* ViewController.swift */,
 				D460B2BB1943CF7600A5D298 /* Main.storyboard */,
@@ -107,6 +148,31 @@
 				D460B2C91943CF7700A5D298 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D460B2D41944C09900A5D298 /* CMUnistrokeGestureRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				D460B2D51944C09900A5D298 /* CMUnistrokeGestureRecognizer-Prefix.pch */,
+				D460B2D61944C09900A5D298 /* CMUnistrokeGestureRecognizer.h */,
+				D460B2D71944C09900A5D298 /* CMUnistrokeGestureRecognizer.m */,
+				D460B2D81944C09900A5D298 /* CMUnistrokeGestureResult.h */,
+				D460B2D91944C09900A5D298 /* CMUnistrokeGestureResult.m */,
+				D460B2DA1944C09900A5D298 /* CMUnistrokeRecognizer */,
+			);
+			path = CMUnistrokeGestureRecognizer;
+			sourceTree = "<group>";
+		};
+		D460B2DA1944C09900A5D298 /* CMUnistrokeRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				D460B2DB1944C09900A5D298 /* CMUnistrokeRecognizer.c */,
+				D460B2DC1944C09900A5D298 /* CMUnistrokeRecognizer.h */,
+				D460B2DD1944C09900A5D298 /* CMUnistrokeRecognizerPrivate.h */,
+				D460B2DE1944C09900A5D298 /* CMUnistrokeRecognizerTypes.c */,
+				D460B2DF1944C09900A5D298 /* CMUnistrokeRecognizerTypes.h */,
+			);
+			path = CMUnistrokeRecognizer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,7 +275,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D460B2BA1943CF7600A5D298 /* ViewController.swift in Sources */,
+				D460B2E21944C09900A5D298 /* CMUnistrokeRecognizer.c in Sources */,
+				D460B2E31944C09900A5D298 /* CMUnistrokeRecognizerTypes.c in Sources */,
+				D460B2E01944C09900A5D298 /* CMUnistrokeGestureRecognizer.m in Sources */,
 				D460B2B81943CF7600A5D298 /* AppDelegate.swift in Sources */,
+				D460B2E11944C09900A5D298 /* CMUnistrokeGestureResult.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +319,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -263,7 +333,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -280,7 +350,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_MODULE_NAME = GestureKeyboard;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "CMUnistrokeGestureRecognizer/GestureKeyboard-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -292,7 +364,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -307,7 +379,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -316,7 +388,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_MODULE_NAME = GestureKeyboard;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "CMUnistrokeGestureRecognizer/GestureKeyboard-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -399,6 +473,7 @@
 				D460B2D01943CF7700A5D298 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D460B2D11943CF7700A5D298 /* Build configuration list for PBXNativeTarget "GestureKeyboardTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +482,7 @@
 				D460B2D31943CF7700A5D298 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
