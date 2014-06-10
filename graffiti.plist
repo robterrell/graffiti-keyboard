@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>a</key>
+        <array>
+            <string>{0.5, 4.5}</string>
+            <string>{2.5, 0.5}</string>
+            <string>{4.5, 4.5}</string>
+        </array>
+        <key>b</key>
+        <array>
+            <string>{1.0, 0.5}</string>
+            <string>{1.0, 4.5}</string>
+            <string>{1.5, 0.75}</string>
+            <string>{3.0, 0.5}</string>
+            <string>{3.5, 1.5}</string>
+            <string>{2.5, 2}</string>
+            <string>{1.5, 2.5}</string>
+            <string>{3.0, 3.0}</string>
+            <string>{3.5, 4}</string>
+            <string>{3.0, 4.5}</string>
+            <string>{2.0, 4.5)</string>
+        </array>
+        <key>c</key>
+        <array>
+            <string>{4.0, 0.5}</string>
+            <string>{1.0, 1.0}</string>
+            <string>{0.5, 2.0}</string>
+            <string>{1.0, 4.0}</string>
+            <string>{3.0, 4.5}</string>
+            <string>{4, 4)</string>
+        </array>
+        <key>d</key>
+        <array>
+            <string>{1.0, 0.75}</string>
+            <string>{1.0, 4.5}</string>
+            <string>{1.25, 1.0}</string>
+            <string>{3.0, 0.5}</string>
+            <string>{4.0, 1.0}</string>
+            <string>{4.5, 2.5}</string>
+            <string>{4.0, 3.5}</string>
+            <string>{2.5, 4.5}</string>
+            <string>{1.0, 4.5)</string>
+        </array>
+    </dict>
+</plist>
