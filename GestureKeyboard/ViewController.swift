@@ -11,32 +11,27 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet var imageView : UIImageView
-    
+
+    var plist:String = NSBundle.mainBundle().pathForResource("graffiti", ofType: "plist")
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         var a = CMUnistrokeGestureRecognizer(target: self, action: "gotGesture:" )
+        var dict = NSDictionary(contentsOfFile: plist) // COMPILER BUG: as Dictionary<String, String[]>
+        var keys:String[] = dict.allKeys as String[]
         
-        var letters = [
-            "a": [ CGPointMake( 0.5, 4.5), CGPointMake( 2.5, 0.5 ), CGPointMake( 4.5, 4.5) ],
-            "b": [ CGPointMake(  1.0, 0.5), CGPointMake(  1.0, 4.5 ), CGPointMake( 1.5, 0.75), CGPointMake( 3.0, 0.5),
-                CGPointMake( 3.5, 1.5), CGPointMake( 2.5, 2), CGPointMake( 1.5, 2.5), CGPointMake( 3.0, 3.0),
-                CGPointMake( 3.5, 4), CGPointMake( 3.0, 4.5), CGPointMake( 2.0, 4.5) ],
-            "c": [ CGPointMake(  4.0, 0.5 ), CGPointMake(  1.0, 1.0 ), CGPointMake(  0.5, 2.0),
-                    CGPointMake( 1.0, 4.0), CGPointMake( 3.0, 4.5), CGPointMake( 4, 4)],
-            "d": [ CGPointMake(1.0, 0.75), CGPointMake(1.0, 4.5), CGPointMake(1.25,1.0), CGPointMake(3.0,0.5),
-                CGPointMake(4.0, 1.0), CGPointMake(4.5, 2.5), CGPointMake(4.0, 3.5), CGPointMake(2.5, 4.5), CGPointMake(1.0, 4.5)]
-            ]
-
-        for (letter, points:Array<CGPoint>) in letters {
+        for letter:String in keys {
             var path = UIBezierPath()
             var first = true
+            var points = dict[letter] as String[]
             for p in points {
+                var cgp = CGPointFromString(p)
                 if (first) {
-                    path.moveToPoint(p)
+                    path.moveToPoint(cgp)
                     first = false
                 } else {
-                    path.addLineToPoint(p)
+                    path.addLineToPoint(cgp)
                 }
             }
             path.closePath();

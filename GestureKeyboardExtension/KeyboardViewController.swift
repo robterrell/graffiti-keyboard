@@ -23,6 +23,10 @@ class KeyboardViewController: UIInputViewController {
     
         // Add custom view sizing constraints here
     }
+    override func viewDidAppear(animated: Bool) {
+        NSLog("viewDidAppear \(self.drawView.frame), \(self.drawView.superview.frame)")
+        self.drawView.center = self.view.center
+    }
 
     override func viewDidLoad() {
         NSLog("Keyboard View Conroller viewDidLoad")
@@ -41,96 +45,38 @@ class KeyboardViewController: UIInputViewController {
         self.view.addSubview(self.nextKeyboardButton)
     
         var nextKeyboardButtonLeftSideConstraint = NSLayoutConstraint(item: self.nextKeyboardButton, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1.0, constant: 0.0)
-        var nextKeyboardButtonBottomConstraint = NSLayoutConstraint(item: self.nextKeyboardButton, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: 0.0)
+        var nextKeyboardButtonBottomConstraint = NSLayoutConstraint(item: self.nextKeyboardButton, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: 7.0)
         self.view.addConstraints([nextKeyboardButtonLeftSideConstraint, nextKeyboardButtonBottomConstraint])
 
-        drawView.frame = CGRectMake(120, 30, 360, 360)
+        drawView.frame = CGRectMake(0, 0, 180, 180)
         drawView.backgroundColor = UIColor.darkGrayColor()
         drawView.center = self.view.center
+        drawView.layer.cornerRadius = 5.0
+        self.view.addSubview(drawView)
 
-//        var drawViewBottomConstraint = NSLayoutConstraint(item: self.drawView, attribute: .CenterY, relatedBy: .Equal, toItem: self.view, attribute: .CenterY, multiplier: 1.0, constant: 0.0)
-//        var drawViewCenterConstraint = NSLayoutConstraint(item: self.drawView, attribute: .CenterX, relatedBy: .Equal, toItem: self.view, attribute: .CenterX, multiplier: 1.0, constant: 0.0)
-//
-//        self.view.addConstraints( [drawViewBottomConstraint, drawViewCenterConstraint] )
+        var drawViewVertConstraint = NSLayoutConstraint(item: self.drawView, attribute: .CenterY, relatedBy: .Equal, toItem: self.drawView.superview, attribute: .CenterY, multiplier: 1.0, constant: 0.0)
 
-        
-       self.view.addSubview(drawView)
-        
-        var letters = [
-            "a": [
-                CGPointMake(0.5, 4.5),
-                CGPointMake(2.5, 0.5),
-                CGPointMake(4.5, 4.5)
-            ],
-            "b": [
-                CGPointMake(1.0, 0.5),
-                CGPointMake(1.0, 4.5),
-                CGPointMake(1.5, 0.75),
-                CGPointMake(3.0, 0.5),
-                CGPointMake(3.5, 1.5),
-                CGPointMake(2.5, 2),
-                CGPointMake(1.5, 2.5),
-                CGPointMake(3.0, 3.0),
-                CGPointMake(3.5, 4),
-                CGPointMake(3.0, 4.5),
-                CGPointMake(2.0, 4.5)
-            ],
-            "c": [
-                CGPointMake(4.0, 0.5),
-                CGPointMake(1.0, 1.0),
-                CGPointMake(0.5, 2.0),
-                CGPointMake(1.0, 4.0),
-                CGPointMake(3.0, 4.5),
-                CGPointMake(4, 4)
-            ],
-            "d": [
-                CGPointMake(1.0, 0.75),
-                CGPointMake(1.0, 4.5),
-                CGPointMake(1.25, 1.0),
-                CGPointMake(3.0, 0.5),
-                CGPointMake(4.0, 1.0),
-                CGPointMake(4.5, 2.5),
-                CGPointMake(4.0, 3.5),
-                CGPointMake(2.5, 4.5),
-                CGPointMake(1.0, 4.5)
-            ],
-//            " ": [
-//                CGPointMake(0.50, 3.0),
-//                CGPointMake(0.75, 3.1),
-//                CGPointMake(1.00, 3.0),
-//                CGPointMake(1.25, 3.1),
-//                CGPointMake(1.50, 3.0),
-//                CGPointMake(1.75, 3.0),
-//                CGPointMake(2.00, 3.1),
-//                CGPointMake(2.50, 3.0),
-//                CGPointMake(2.75, 3.1),
-//                CGPointMake(3.00, 3.0),
-//                CGPointMake(3.25, 3.1),
-//                CGPointMake(3.50, 3.0),
-//                CGPointMake(3.75, 3.1),
-//                CGPointMake(4.00, 3.0)
-//            ],
-            "delete": [
-                CGPointMake(4.5, 3.1),
-                CGPointMake(3.5, 3.0),
-                CGPointMake(2.5, 3.1),
-                CGPointMake(1.5, 3.0),
-                CGPointMake(0.5, 3.1)
-            ]
-            
-        ]
+        var drawViewHorizConstraint = NSLayoutConstraint(item: self.drawView, attribute: .CenterX, relatedBy: .Equal, toItem: self.nextKeyboardButton.superview, attribute: .CenterX, multiplier: 1.0, constant: 0.0)
+
+        self.view.addConstraints( [drawViewVertConstraint, drawViewHorizConstraint] )
 
         var a = CMUnistrokeGestureRecognizer(target: self, action: "gotGesture:" )
 
-        for (letter, points:Array<CGPoint>) in letters {
+        var plist = NSBundle.mainBundle().pathForResource("graffiti", ofType: "plist")
+        var dict = NSDictionary(contentsOfFile: plist) // COMPILER BUG: as Dictionary<String, String[]>
+        var keys:String[] = dict.allKeys as String[]
+        
+        for letter:String in keys {
             var path = UIBezierPath()
             var first = true
+            var points = dict[letter] as String[]
             for p in points {
+                var cgp = CGPointFromString(p)
                 if (first) {
-                    path.moveToPoint(p)
+                    path.moveToPoint(cgp)
                     first = false
                 } else {
-                    path.addLineToPoint(p)
+                    path.addLineToPoint(cgp)
                 }
             }
             path.closePath();
