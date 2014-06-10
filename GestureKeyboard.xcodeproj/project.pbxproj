@@ -24,6 +24,17 @@
 		D49E3282194528F2001B9BB1 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D460B2E91944D6A100A5D298 /* GLKit.framework */; };
 		D49E3283194528F5001B9BB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D460B2EB1944D6A600A5D298 /* UIKit.framework */; };
 		D49E3284194528FA001B9BB1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D460B2ED1944D6F300A5D298 /* CoreGraphics.framework */; };
+		D49E328E19454F84001B9BB1 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E328D19454F84001B9BB1 /* KeyboardViewController.swift */; };
+		D49E329219454F84001B9BB1 /* com.touchcentric.GestureKeyboard.GestureKeyboardExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D49E328919454F84001B9BB1 /* com.touchcentric.GestureKeyboard.GestureKeyboardExtension.appex */; };
+		D49E3298194552C1001B9BB1 /* CMUnistrokeGestureResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D460B2D91944C09900A5D298 /* CMUnistrokeGestureResult.m */; };
+		D49E3299194552C6001B9BB1 /* CMUnistrokeGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = D460B2D71944C09900A5D298 /* CMUnistrokeGestureRecognizer.m */; };
+		D49E329A194552CB001B9BB1 /* CMUnistrokeRecognizer.c in Sources */ = {isa = PBXBuildFile; fileRef = D460B2DB1944C09900A5D298 /* CMUnistrokeRecognizer.c */; };
+		D49E329B194552DA001B9BB1 /* CMUnistrokeRecognizerTypes.c in Sources */ = {isa = PBXBuildFile; fileRef = D460B2DE1944C09900A5D298 /* CMUnistrokeRecognizerTypes.c */; };
+		D49E329C1946BAE2001B9BB1 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D460B2E91944D6A100A5D298 /* GLKit.framework */; };
+		D49E329D1946BAE7001B9BB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D460B2E71944D69900A5D298 /* Foundation.framework */; };
+		D49E329E1946BAEE001B9BB1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D460B2ED1944D6F300A5D298 /* CoreGraphics.framework */; };
+		D49E329F1946BAFC001B9BB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D460B2EB1944D6A600A5D298 /* UIKit.framework */; };
+		D49E32B41946E176001B9BB1 /* graffiti_strokes.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D49E32B31946E176001B9BB1 /* graffiti_strokes.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +45,35 @@
 			remoteGlobalIDString = D460B2B11943CF7600A5D298;
 			remoteInfo = GestureKeyboard;
 		};
+		D49E328F19454F84001B9BB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D460B2AA1943CF7600A5D298 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D49E328819454F84001B9BB1;
+			remoteInfo = GestureKeyboardExtension;
+		};
+		D49E329319454F84001B9BB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D460B2AA1943CF7600A5D298 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D49E328819454F84001B9BB1;
+			remoteInfo = GestureKeyboardExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D49E329119454F84001B9BB1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D49E329219454F84001B9BB1 /* com.touchcentric.GestureKeyboard.GestureKeyboardExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D460B2B21943CF7600A5D298 /* GestureKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestureKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +100,10 @@
 		D460B2E91944D6A100A5D298 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		D460B2EB1944D6A600A5D298 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D460B2ED1944D6F300A5D298 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D49E328919454F84001B9BB1 /* com.touchcentric.GestureKeyboard.GestureKeyboardExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = com.touchcentric.GestureKeyboard.GestureKeyboardExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D49E328C19454F84001B9BB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D49E328D19454F84001B9BB1 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		D49E32B31946E176001B9BB1 /* graffiti_strokes.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = graffiti_strokes.jpeg; path = GestureKeyboard/graffiti_strokes.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,12 +129,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D49E328619454F84001B9BB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D49E329F1946BAFC001B9BB1 /* UIKit.framework in Frameworks */,
+				D49E329E1946BAEE001B9BB1 /* CoreGraphics.framework in Frameworks */,
+				D49E329D1946BAE7001B9BB1 /* Foundation.framework in Frameworks */,
+				D49E329C1946BAE2001B9BB1 /* GLKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		D460B2A91943CF7600A5D298 = {
 			isa = PBXGroup;
 			children = (
+				D49E32B31946E176001B9BB1 /* graffiti_strokes.jpeg */,
 				D460B2ED1944D6F300A5D298 /* CoreGraphics.framework */,
 				D460B2EB1944D6A600A5D298 /* UIKit.framework */,
 				D460B2E91944D6A100A5D298 /* GLKit.framework */,
@@ -99,6 +154,7 @@
 				D460B2D41944C09900A5D298 /* CMUnistrokeGestureRecognizer */,
 				D460B2B41943CF7600A5D298 /* GestureKeyboard */,
 				D460B2C71943CF7700A5D298 /* GestureKeyboardTests */,
+				D49E328A19454F84001B9BB1 /* GestureKeyboardExtension */,
 				D460B2B31943CF7600A5D298 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,6 +164,7 @@
 			children = (
 				D460B2B21943CF7600A5D298 /* GestureKeyboard.app */,
 				D460B2C41943CF7700A5D298 /* GestureKeyboardTests.xctest */,
+				D49E328919454F84001B9BB1 /* com.touchcentric.GestureKeyboard.GestureKeyboardExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,6 +232,23 @@
 			path = CMUnistrokeRecognizer;
 			sourceTree = "<group>";
 		};
+		D49E328A19454F84001B9BB1 /* GestureKeyboardExtension */ = {
+			isa = PBXGroup;
+			children = (
+				D49E328D19454F84001B9BB1 /* KeyboardViewController.swift */,
+				D49E328B19454F84001B9BB1 /* Supporting Files */,
+			);
+			path = GestureKeyboardExtension;
+			sourceTree = "<group>";
+		};
+		D49E328B19454F84001B9BB1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D49E328C19454F84001B9BB1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -185,10 +259,13 @@
 				D460B2AE1943CF7600A5D298 /* Sources */,
 				D460B2AF1943CF7600A5D298 /* Frameworks */,
 				D460B2B01943CF7600A5D298 /* Resources */,
+				D49E329119454F84001B9BB1 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D49E329019454F84001B9BB1 /* PBXTargetDependency */,
+				D49E329419454F84001B9BB1 /* PBXTargetDependency */,
 			);
 			name = GestureKeyboard;
 			productName = GestureKeyboard;
@@ -213,6 +290,23 @@
 			productReference = D460B2C41943CF7700A5D298 /* GestureKeyboardTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		D49E328819454F84001B9BB1 /* GestureKeyboardExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D49E329519454F84001B9BB1 /* Build configuration list for PBXNativeTarget "GestureKeyboardExtension" */;
+			buildPhases = (
+				D49E328519454F84001B9BB1 /* Sources */,
+				D49E328619454F84001B9BB1 /* Frameworks */,
+				D49E328719454F84001B9BB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GestureKeyboardExtension;
+			productName = GestureKeyboardExtension;
+			productReference = D49E328919454F84001B9BB1 /* com.touchcentric.GestureKeyboard.GestureKeyboardExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -228,6 +322,9 @@
 					D460B2C31943CF7700A5D298 = {
 						CreatedOnToolsVersion = 6.0;
 						TestTargetID = D460B2B11943CF7600A5D298;
+					};
+					D49E328819454F84001B9BB1 = {
+						CreatedOnToolsVersion = 6.0;
 					};
 				};
 			};
@@ -246,6 +343,7 @@
 			targets = (
 				D460B2B11943CF7600A5D298 /* GestureKeyboard */,
 				D460B2C31943CF7700A5D298 /* GestureKeyboardTests */,
+				D49E328819454F84001B9BB1 /* GestureKeyboardExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -257,10 +355,18 @@
 			files = (
 				D460B2BD1943CF7600A5D298 /* Main.storyboard in Resources */,
 				D460B2BF1943CF7600A5D298 /* Images.xcassets in Resources */,
+				D49E32B41946E176001B9BB1 /* graffiti_strokes.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D460B2C21943CF7700A5D298 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D49E328719454F84001B9BB1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -291,6 +397,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D49E328519454F84001B9BB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D49E329B194552DA001B9BB1 /* CMUnistrokeRecognizerTypes.c in Sources */,
+				D49E329A194552CB001B9BB1 /* CMUnistrokeRecognizer.c in Sources */,
+				D49E328E19454F84001B9BB1 /* KeyboardViewController.swift in Sources */,
+				D49E3299194552C6001B9BB1 /* CMUnistrokeGestureRecognizer.m in Sources */,
+				D49E3298194552C1001B9BB1 /* CMUnistrokeGestureResult.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -298,6 +416,16 @@
 			isa = PBXTargetDependency;
 			target = D460B2B11943CF7600A5D298 /* GestureKeyboard */;
 			targetProxy = D460B2C51943CF7700A5D298 /* PBXContainerItemProxy */;
+		};
+		D49E329019454F84001B9BB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D49E328819454F84001B9BB1 /* GestureKeyboardExtension */;
+			targetProxy = D49E328F19454F84001B9BB1 /* PBXContainerItemProxy */;
+		};
+		D49E329419454F84001B9BB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D49E328819454F84001B9BB1 /* GestureKeyboardExtension */;
+			targetProxy = D49E329319454F84001B9BB1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -351,7 +479,7 @@
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_MODULE_NAME = GestureKeyboard;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos8.0;
 				SWIFT_OBJC_BRIDGING_HEADER = "CMUnistrokeGestureRecognizer/GestureKeyboard-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -388,8 +516,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				METAL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_MODULE_NAME = GestureKeyboard;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos8.0;
 				SWIFT_OBJC_BRIDGING_HEADER = "CMUnistrokeGestureRecognizer/GestureKeyboard-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -454,6 +583,36 @@
 			};
 			name = Release;
 		};
+		D49E329619454F84001B9BB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GestureKeyboardExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "com.touchcentric.GestureKeyboard.$(TARGET_NAME:rfc1034identifier)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D49E329719454F84001B9BB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				INFOPLIST_FILE = GestureKeyboardExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "com.touchcentric.GestureKeyboard.$(TARGET_NAME:rfc1034identifier)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -483,6 +642,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		D49E329519454F84001B9BB1 /* Build configuration list for PBXNativeTarget "GestureKeyboardExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D49E329619454F84001B9BB1 /* Debug */,
+				D49E329719454F84001B9BB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
