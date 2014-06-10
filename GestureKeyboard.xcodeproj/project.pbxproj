@@ -35,6 +35,7 @@
 		D49E329E1946BAEE001B9BB1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D460B2ED1944D6F300A5D298 /* CoreGraphics.framework */; };
 		D49E329F1946BAFC001B9BB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D460B2EB1944D6A600A5D298 /* UIKit.framework */; };
 		D49E32B41946E176001B9BB1 /* graffiti_strokes.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D49E32B31946E176001B9BB1 /* graffiti_strokes.jpeg */; };
+		D4B4ABBD1947520800052189 /* graffiti.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4B4ABBC1947520800052189 /* graffiti.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		D49E328C19454F84001B9BB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D49E328D19454F84001B9BB1 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		D49E32B31946E176001B9BB1 /* graffiti_strokes.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = graffiti_strokes.jpeg; path = GestureKeyboard/graffiti_strokes.jpeg; sourceTree = "<group>"; };
+		D4B4ABBC1947520800052189 /* graffiti.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = graffiti.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 		D460B2A91943CF7600A5D298 = {
 			isa = PBXGroup;
 			children = (
+				D4B4ABBC1947520800052189 /* graffiti.plist */,
 				D49E32B31946E176001B9BB1 /* graffiti_strokes.jpeg */,
 				D460B2ED1944D6F300A5D298 /* CoreGraphics.framework */,
 				D460B2EB1944D6A600A5D298 /* UIKit.framework */,
@@ -356,6 +359,7 @@
 				D460B2BD1943CF7600A5D298 /* Main.storyboard in Resources */,
 				D460B2BF1943CF7600A5D298 /* Images.xcassets in Resources */,
 				D49E32B41946E176001B9BB1 /* graffiti_strokes.jpeg in Resources */,
+				D4B4ABBD1947520800052189 /* graffiti.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,6 +654,7 @@
 				D49E329719454F84001B9BB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
