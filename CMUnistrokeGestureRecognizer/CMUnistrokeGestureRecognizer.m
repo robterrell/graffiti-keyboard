@@ -187,13 +187,13 @@ CMURCGPathApplierFunc(void *info, const CGPathElement *element);
 	isRecognized = YES;
 	self.result = [[CMUnistrokeGestureResult alloc] initWithName:[NSString stringWithCString:result->name encoding:NSUTF8StringEncoding] score:result->score];
         NSLog(@"Recognized: result->score = %f result->name = '%s'", result->score, result->name);
-        NSLog(@"Path: %@", self.strokePath);
+        //NSLog(@"Path: %@", self.strokePath);
     }
     else {
         isRecognized = NO;
         self.result = nil;
         NSLog(@"NOT Recognized");
-        NSLog(@"Path: %@", self.strokePath);
+        //NSLog(@"Path: %@", self.strokePath);
     }
     
     CMURResultDelete(result);
