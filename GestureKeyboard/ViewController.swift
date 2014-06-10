@@ -9,40 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-                            
+    
+    @IBOutlet var imageView : UIImageView
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         var a = CMUnistrokeGestureRecognizer(target: self, action: "gotGesture:" )
-
-        var aPath = UIBezierPath()
-        aPath.moveToPoint( CGPointMake( 0.5, 4.5) )
-        aPath.addLineToPoint( CGPointMake( 2.5, 0.5 ) )
-        aPath.addLineToPoint( CGPointMake( 4.5, 4.5) )
-        aPath.closePath()
-
-        var bPath = UIBezierPath()
-        bPath.moveToPoint(    CGPointMake(  1.0, 0.5) )
-        bPath.addLineToPoint( CGPointMake(  1.0, 4.5 ) )
-        bPath.addLineToPoint( CGPointMake( 1.5, 0.75) )
-        bPath.addLineToPoint( CGPointMake( 3.0, 0.5) )
-        bPath.addLineToPoint( CGPointMake( 3.5, 1.5) )
-        bPath.addLineToPoint( CGPointMake( 2.5, 2) )
-        bPath.addLineToPoint( CGPointMake( 1.5, 2.5) )
-        bPath.addLineToPoint( CGPointMake( 3.0, 3.0) )
-        bPath.addLineToPoint( CGPointMake( 3.5, 4) )
-        bPath.addLineToPoint( CGPointMake( 3.0, 4.5) )
-        bPath.addLineToPoint( CGPointMake( 2.0, 4.5) )
-        bPath.closePath()
-
-        var cPath = UIBezierPath()
-        cPath.moveToPoint(    CGPointMake(  4.0, 0.5 ) )
-        cPath.addLineToPoint( CGPointMake(  1.0, 1.0 ) )
-        cPath.addLineToPoint( CGPointMake(  0.5, 2.0) )
-        cPath.addLineToPoint( CGPointMake( 1.0, 4.0) )
-        cPath.addLineToPoint( CGPointMake( 3.0, 4.5) )
-        cPath.addLineToPoint( CGPointMake( 4, 4) )
-        cPath.closePath()
-
         
         var letters = [
             "a": [ CGPointMake( 0.5, 4.5), CGPointMake( 2.5, 0.5 ), CGPointMake( 4.5, 4.5) ],
@@ -69,18 +42,30 @@ class ViewController: UIViewController {
             path.closePath();
             a.registerUnistrokeWithName( letter, bezierPath: path)
         }
-//        a.registerUnistrokeWithName( "a" , bezierPath: aPath )
-//        a.registerUnistrokeWithName( "b" , bezierPath: bPath )
-//        a.registerUnistrokeWithName( "c" , bezierPath: cPath )
 
+        
+        var drawView = UIView() as UIView
+        drawView.frame = CGRectMake(0, 0, 120, 120)
+        drawView.center = self.view.center
+        drawView.center.y = drawView.center.y + 180
+        drawView.backgroundColor = UIColor.darkGrayColor()
+//        var drawViewBottomConstraint = NSLayoutConstraint(item: self.imageView, attribute: .Top, relatedBy: .Equal, toItem: drawView, attribute: .Bottom, multiplier: 1.0, constant: 0.0)
+//        self.view.addConstraint( drawViewBottomConstraint )
+        
+        self.view.addSubview(drawView)
         self.view.addGestureRecognizer(a)
+    }
+    
+    func hodor( b : UIButton )
+    {
+        NSLog("Hodor");
     }
     
     func gotGesture( r : CMUnistrokeGestureRecognizer ) {
         var path = r.strokePath
         var name = r.result.recognizedStrokeName
 
-        println("gotGesture \(path) \(name)")
+        println("gotGesture: \(name)")
 
     }
 
