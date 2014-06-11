@@ -6,12 +6,16 @@
 //  Copyright (c) 2014 TouchCentric. All rights reserved.
 //
 
+// Note: this is the main view controller for the  app -- NOT for the keyboard.
+
 import UIKit
 
 class ViewController: UIViewController {
     
     @IBOutlet var imageView : UIImageView
 
+    @IBOutlet var label : UILabel
+    
     var plist:String = NSBundle.mainBundle().pathForResource("graffiti", ofType: "plist")
 
     override func viewDidLoad() {
@@ -51,16 +55,14 @@ class ViewController: UIViewController {
         self.view.addGestureRecognizer(a)
     }
     
-    func hodor( b : UIButton )
-    {
-        NSLog("Hodor");
-    }
-    
     func gotGesture( r : CMUnistrokeGestureRecognizer ) {
         var path = r.strokePath
         var name = r.result.recognizedStrokeName
 
         println("gotGesture: \(name)")
+        
+        label.text = label.text + name;
+        
 
     }
 
