@@ -13,9 +13,13 @@ class KeyboardViewController: UIInputViewController {
     @IBOutlet var nextKeyboardButton: UIButton
     var drawView : UIView = UIView()
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         NSLog("Keyboard View Controller init")
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     override func updateViewConstraints() {
@@ -39,7 +43,7 @@ class KeyboardViewController: UIInputViewController {
         self.nextKeyboardButton = UIButton.buttonWithType(.System) as UIButton
         self.nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard!", comment: "Title for 'Next Keyboard' button"), forState: .Normal)
         self.nextKeyboardButton.sizeToFit()
-        self.nextKeyboardButton.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = false
         self.nextKeyboardButton.addTarget(self, action: "advanceToNextInputMode", forControlEvents: .TouchUpInside)
         
         self.view.addSubview(self.nextKeyboardButton)
@@ -64,12 +68,12 @@ class KeyboardViewController: UIInputViewController {
 
         var plist = NSBundle.mainBundle().pathForResource("graffiti", ofType: "plist")
         var dict = NSDictionary(contentsOfFile: plist) // COMPILER BUG: as Dictionary<String, String[]>
-        var keys:String[] = dict.allKeys as String[]
+        var keys:[String] = dict.allKeys as [String]
         
         for letter:String in keys {
             var path = UIBezierPath()
             var first = true
-            var points = dict[letter] as String[]
+            var points = dict[letter] as [String]
             for p in points {
                 var cgp = CGPointFromString(p)
                 if (first) {
@@ -89,11 +93,11 @@ class KeyboardViewController: UIInputViewController {
 
     func gotGesture( r : CMUnistrokeGestureRecognizer ) {
         var path = r.strokePath
-        var name = r.result.recognizedStrokeName
+        let name = r.result.recognizedStrokeName
         
-        println("gotGesture \(name)")
+        print("gotGesture \(name)")
         
-        var doc : UIKeyInput = self.textDocumentProxy as UIKeyInput
+        let doc : UIKeyInput = self.textDocumentProxy as UIKeyInput
 
         if name == "delete" {
             doc.deleteBackward()
@@ -107,15 +111,15 @@ class KeyboardViewController: UIInputViewController {
         // Dispose of any resources that can be recreated
     }
 
-    override func textWillChange(textInput: UITextInput) {
+    override func textWillChange(textInput: UITextInput?) {
         // The app is about to change the document's contents. Perform any preparation here.
     }
 
-    override func textDidChange(textInput: UITextInput) {
+    override func textDidChange(textInput: UITextInput?) {
         // The app has just changed the document's contents, the document context has been updated.
     
         var textColor: UIColor
-        var proxy = self.textDocumentProxy as UITextDocumentProxy
+        let proxy = self.textDocumentProxy as UITextDocumentProxy
         if proxy.keyboardAppearance == UIKeyboardAppearance.Dark {
             textColor = UIColor.whiteColor()
         } else {

@@ -316,6 +316,8 @@
 		D460B2AA1943CF7600A5D298 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0730;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = TouchCentric;
 				TargetAttributes = {

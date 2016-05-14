@@ -23,12 +23,12 @@ class ViewController: UIViewController {
         
         var a = CMUnistrokeGestureRecognizer(target: self, action: "gotGesture:" )
         var dict = NSDictionary(contentsOfFile: plist) // COMPILER BUG: as Dictionary<String, String[]>
-        var keys:String[] = dict.allKeys as String[]
+        var keys:[String] = dict.allKeys as! [String]
         
         for letter:String in keys {
             var path = UIBezierPath()
             var first = true
-            var points = dict[letter] as String[]
+            var points = dict[letter] as! [String]
             for p in points {
                 var cgp = CGPointFromString(p)
                 if (first) {
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
         var path = r.strokePath
         var name = r.result.recognizedStrokeName
 
-        println("gotGesture: \(name)")
+        print("gotGesture: \(name)")
         
         label.text = label.text + name;
         
