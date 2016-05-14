@@ -12,25 +12,23 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var imageView : UIImageView
+    @IBOutlet var imageView : UIImageView?
 
-    @IBOutlet var label : UILabel
-    
-    var plist:String = NSBundle.mainBundle().pathForResource("graffiti", ofType: "plist")
+    @IBOutlet var label : UILabel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        var a = CMUnistrokeGestureRecognizer(target: self, action: "gotGesture:" )
-        var dict = NSDictionary(contentsOfFile: plist) // COMPILER BUG: as Dictionary<String, String[]>
-        var keys:String[] = dict.allKeys as String[]
-        
-        for letter:String in keys {
-            var path = UIBezierPath()
+		
+		guard let plist = NSBundle.mainBundle().pathForResource("graffiti", ofType: "plist") else {return}
+		
+        let a = CMUnistrokeGestureRecognizer(target: self, action: #selector(ViewController.gotGesture(_:)) )
+		guard let dict = NSDictionary(contentsOfFile: plist) else {return}
+		
+		for (letter, points) in dict {
+            let path = UIBezierPath()
             var first = true
-            var points = dict[letter] as String[]
-            for p in points {
-                var cgp = CGPointFromString(p)
+            for p in points as! [String] {
+                let cgp = CGPointFromString(p)
                 if (first) {
                     path.moveToPoint(cgp)
                     first = false
@@ -39,11 +37,11 @@ class ViewController: UIViewController {
                 }
             }
             path.closePath();
-            a.registerUnistrokeWithName( letter, bezierPath: path)
+            a.registerUnistrokeWithName(letter as! String, bezierPath: path)
         }
 
         
-        var drawView = UIView() as UIView
+        let drawView = UIView() as UIView
         drawView.frame = CGRectMake(0, 0, 120, 120)
         drawView.center = self.view.center
         drawView.center.y = drawView.center.y + 180
@@ -56,21 +54,19 @@ class ViewController: UIViewController {
     }
     
     func gotGesture( r : CMUnistrokeGestureRecognizer ) {
-        var path = r.strokePath
-        var name = r.result.recognizedStrokeName
+        _ = r.strokePath
+        let name = r.result.recognizedStrokeName
 
-        println("gotGesture: \(name)")
-        
-        label.text = label.text + name;
-        
-
+        print("gotGesture: \(name)")
+		
+		if let l = label {
+			l.text = (l.text ?? "") + name;
+		}
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
