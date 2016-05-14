@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A50F7DAB1CE7693800E0D492 /* graffiti.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4B4ABBC1947520800052189 /* graffiti.plist */; };
+		A50F7DAD1CE769C600E0D492 /* graffiti.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4B4ABBC1947520800052189 /* graffiti.plist */; };
 		D460B2B81943CF7600A5D298 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D460B2B71943CF7600A5D298 /* AppDelegate.swift */; };
 		D460B2BA1943CF7600A5D298 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D460B2B91943CF7600A5D298 /* ViewController.swift */; };
 		D460B2BD1943CF7600A5D298 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D460B2BB1943CF7600A5D298 /* Main.storyboard */; };
@@ -35,7 +37,6 @@
 		D49E329E1946BAEE001B9BB1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D460B2ED1944D6F300A5D298 /* CoreGraphics.framework */; };
 		D49E329F1946BAFC001B9BB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D460B2EB1944D6A600A5D298 /* UIKit.framework */; };
 		D49E32B41946E176001B9BB1 /* graffiti_strokes.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D49E32B31946E176001B9BB1 /* graffiti_strokes.jpeg */; };
-		D4B4ABBD1947520800052189 /* graffiti.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4B4ABBC1947520800052189 /* graffiti.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -361,7 +362,7 @@
 				D460B2BD1943CF7600A5D298 /* Main.storyboard in Resources */,
 				D460B2BF1943CF7600A5D298 /* Images.xcassets in Resources */,
 				D49E32B41946E176001B9BB1 /* graffiti_strokes.jpeg in Resources */,
-				D4B4ABBD1947520800052189 /* graffiti.plist in Resources */,
+				A50F7DAD1CE769C600E0D492 /* graffiti.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +377,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A50F7DAB1CE7693800E0D492 /* graffiti.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +539,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GestureKeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.touchcentric.${PRODUCT_NAME:rfc1034identifier}";
@@ -549,6 +552,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GestureKeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.touchcentric.${PRODUCT_NAME:rfc1034identifier}";

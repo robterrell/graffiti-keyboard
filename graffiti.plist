@@ -22,13 +22,13 @@
 		<string>{3.0, 4.5}</string>
 		<string>{2.0, 4.5)</string>
 	</array>
-    <key>c</key>
-    <array>
-        <string>{4.0, 1.0}</string>
-        <string>{1.0, 1.0}</string>
-        <string>{1.0, 4.0}</string>
-        <string>{4.0, 4.0}</string>
-    </array>
+	<key>c</key>
+	<array>
+		<string>{4.0, 1.0}</string>
+		<string>{1.0, 1.0}</string>
+		<string>{1.0, 4.0}</string>
+		<string>{4.0, 4.0}</string>
+	</array>
 	<key>d</key>
 	<array>
 		<string>{1.0, 0.75}</string>
@@ -41,127 +41,127 @@
 		<string>{2.5, 4.5}</string>
 		<string>{1.0, 4.5)</string>
 	</array>
-    <key>e</key>
-    <array>
-        <string>{4.0, 1.0}</string>
-        <string>{3.0, 0.5}</string>
-        <string>{2.0, 0.5}</string>
-        <string>{1.0, 1.5}</string>
-        <string>{2.5, 2.5}</string>
-        <string>{1.0, 3.5}</string>
-        <string>{2.0, 4.5}</string>
-        <string>{3.0, 4.5}</string>
-        <string>{4.0, 4.0}</string>
-    </array>
-    <key>f</key>
-    <array>
-        <string>{1.0, 4.0}</string>
-        <string>{1.0, 1.0}</string>
-        <string>{4.0, 1.0}</string>
-    </array>
-    <key>g</key>
-    <array>
-        <string>{4.0, 1.5}</string>
-        <string>{3.0, 0.5}</string>
-        <string>{2.0, 0.5}</string>
-        <string>{1.0, 1.5}</string>
-        <string>{1.0, 3.5}</string>
-        <string>{2.0, 4.5}</string>
-        <string>{4.0, 4.5}</string>
-        <string>{4.0, 3.0}</string>
-        <string>{3.0, 3.0}</string>
-    </array>
-    <key>h</key>
-    <array>
-        <string>{1.0, 0.5}</string>
-        <string>{1.0, 4.0}</string>
-        <string>{1.1, 2.0}</string>
-        <string>{3.0, 2.0}</string>
-        <string>{4.0, 3.0}</string>
-    </array>
-    <key>i</key>
-    <array>
-        <string>{3.0, 0.5}</string>
-        <string>{3.2, 1.0}</string>
-        <string>{3.0, 1.5}</string>
-        <string>{3.2, 2.0}</string>
-        <string>{3.0, 2.5}</string>
-        <string>{3.2, 3.0}</string>
-        <string>{3.0, 3.5}</string>
-        <string>{3.2, 4.0}</string>
-        <string>{3.0, 4.5}</string>
-    </array>
-    <key>j</key>
-    <array>
-        <string>{4.0, 0.5}</string>
-        <string>{4.0, 4.5}</string>
-        <string>{1.0, 4.5}</string>
-    </array>
-    <key>k</key>
-    <array>
-        <string>{4.0, 1.0}</string>
-        <string>{1.0, 4.0}</string>
-        <string>{1.0, 1.0}</string>
-        <string>{4.0, 4.0}</string>
-    </array>
-    <key>l</key>
-    <array>
-        <string>{1.0, 1.0}</string>
-        <string>{1.1, 4.0}</string>
-        <string>{4.0, 4.0}</string>
-    </array>
-    <key>m</key>
-    <array>
-        <string>{1.0, 4.0}</string>
-        <string>{1.0, 1.0}</string>
-        <string>{2.5, 2.0}</string>
-        <string>{4.0, 1.0}</string>
-        <string>{4.0, 4.0}</string>
-    </array>
-    <key>n</key>
-    <array>
-        <string>{1.0, 4.0}</string>
-        <string>{1.1, 1.0}</string>
-        <string>{4.0, 4.0}</string>
-        <string>{4.0, 1.0}</string>
-    </array>
-    <key>o</key>
-    <array>
-        <string>{2.0, 1.0}</string>
-        <string>{1.0, 2.0}</string>
-        <string>{1.0, 3.0}</string>
-        <string>{2.0, 4.0}</string>
-        <string>{3.0, 4.0}</string>
-        <string>{4.0, 3.0}</string>
-        <string>{4.0, 2.0}</string>
-        <string>{3.0, 1.0}</string>
-    </array>
-    <key>p</key>
-    <array>
-        <string>{0.8, 1.0}</string>
-        <string>{1.0, 4.5}</string>
-        <string>{1.0, 1.0}</string>
-        <string>{2.0, 1.0}</string>
-        <string>{3.0, 2.0}</string>
-        <string>{2.0, 3.0}</string>
-        <string>{1.0, 3.0}</string>
-    </array>
-    <key> </key>
-    <array>
-        <string>{1.5, 3.0}</string>
-        <string>{2.0, 3.1}</string>
-        <string>{2.5, 3.1}</string>
-        <string>{3.0, 3.0}</string>
-        <string>{3.5, 3.0}</string>
-        <string>{4.0, 3.1}</string>
-    </array>
-    <key>delete</key>
-    <array>
-        <string>{3.5, 3.2}</string>
-        <string>{3.0, 3.1}</string>
-        <string>{2.5, 3.0}</string>
-        <string>{2.0, 3.1}</string>
-        <string>{1.5, 3.0}</string>
-    </array>
+	<key>e</key>
+	<array>
+		<string>{4.0, 1.0}</string>
+		<string>{3.0, 0.5}</string>
+		<string>{2.0, 0.5}</string>
+		<string>{1.0, 1.5}</string>
+		<string>{2.5, 2.5}</string>
+		<string>{1.0, 3.5}</string>
+		<string>{2.0, 4.5}</string>
+		<string>{3.0, 4.5}</string>
+		<string>{4.0, 4.0}</string>
+	</array>
+	<key>f</key>
+	<array>
+		<string>{1.0, 4.0}</string>
+		<string>{1.0, 1.0}</string>
+		<string>{4.0, 1.0}</string>
+	</array>
+	<key>g</key>
+	<array>
+		<string>{4.0, 1.5}</string>
+		<string>{3.0, 0.5}</string>
+		<string>{2.0, 0.5}</string>
+		<string>{1.0, 1.5}</string>
+		<string>{1.0, 3.5}</string>
+		<string>{2.0, 4.5}</string>
+		<string>{4.0, 4.5}</string>
+		<string>{4.0, 3.0}</string>
+		<string>{3.0, 3.0}</string>
+	</array>
+	<key>h</key>
+	<array>
+		<string>{1.0, 0.5}</string>
+		<string>{1.0, 4.0}</string>
+		<string>{1.1, 2.0}</string>
+		<string>{3.0, 2.0}</string>
+		<string>{4.0, 3.0}</string>
+	</array>
+	<key>i</key>
+	<array>
+		<string>{3.0, 0.5}</string>
+		<string>{3.2, 1.0}</string>
+		<string>{3.0, 1.5}</string>
+		<string>{3.2, 2.0}</string>
+		<string>{3.0, 2.5}</string>
+		<string>{3.2, 3.0}</string>
+		<string>{3.0, 3.5}</string>
+		<string>{3.2, 4.0}</string>
+		<string>{3.0, 4.5}</string>
+	</array>
+	<key>j</key>
+	<array>
+		<string>{4.0, 0.5}</string>
+		<string>{4.0, 4.5}</string>
+		<string>{1.0, 4.5}</string>
+	</array>
+	<key>k</key>
+	<array>
+		<string>{4.0, 1.0}</string>
+		<string>{1.0, 4.0}</string>
+		<string>{1.0, 1.0}</string>
+		<string>{4.0, 4.0}</string>
+	</array>
+	<key>l</key>
+	<array>
+		<string>{1.0, 1.0}</string>
+		<string>{1.1, 4.0}</string>
+		<string>{4.0, 4.0}</string>
+	</array>
+	<key>m</key>
+	<array>
+		<string>{1.0, 4.0}</string>
+		<string>{1.0, 1.0}</string>
+		<string>{2.5, 2.0}</string>
+		<string>{4.0, 1.0}</string>
+		<string>{4.0, 4.0}</string>
+	</array>
+	<key>n</key>
+	<array>
+		<string>{1.0, 4.0}</string>
+		<string>{1.1, 1.0}</string>
+		<string>{4.0, 4.0}</string>
+		<string>{4.0, 1.0}</string>
+	</array>
+	<key>o</key>
+	<array>
+		<string>{2.0, 1.0}</string>
+		<string>{1.0, 2.0}</string>
+		<string>{1.0, 3.0}</string>
+		<string>{2.0, 4.0}</string>
+		<string>{3.0, 4.0}</string>
+		<string>{4.0, 3.0}</string>
+		<string>{4.0, 2.0}</string>
+		<string>{3.0, 1.0}</string>
+	</array>
+	<key>p</key>
+	<array>
+		<string>{0.8, 1.0}</string>
+		<string>{1.0, 4.5}</string>
+		<string>{1.0, 1.0}</string>
+		<string>{2.0, 1.0}</string>
+		<string>{3.0, 2.0}</string>
+		<string>{2.0, 3.0}</string>
+		<string>{1.0, 3.0}</string>
+	</array>
+	<key> </key>
+	<array>
+		<string>{1.5, 3.0}</string>
+		<string>{2.0, 3.1}</string>
+		<string>{2.5, 3.1}</string>
+		<string>{3.0, 3.0}</string>
+		<string>{3.5, 3.0}</string>
+		<string>{4.0, 3.1}</string>
+	</array>
+	<key>delete</key>
+	<array>
+		<string>{3.5, 3.2}</string>
+		<string>{3.0, 3.1}</string>
+		<string>{2.5, 3.0}</string>
+		<string>{2.0, 3.1}</string>
+		<string>{1.5, 3.0}</string>
+	</array>
 </dict>
 </plist>

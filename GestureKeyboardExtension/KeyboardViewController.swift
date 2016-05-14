@@ -10,7 +10,7 @@ import UIKit
 
 class KeyboardViewController: UIInputViewController {
 
-    @IBOutlet var nextKeyboardButton: UIButton
+    @IBOutlet var nextKeyboardButton: UIButton?
     var drawView : UIView = UIView()
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
@@ -28,7 +28,7 @@ class KeyboardViewController: UIInputViewController {
         // Add custom view sizing constraints here
     }
     override func viewDidAppear(animated: Bool) {
-        NSLog("viewDidAppear \(self.drawView.frame), \(self.drawView.superview.frame)")
+        NSLog("viewDidAppear \(self.drawView.frame), \(self.drawView.superview?.frame)")
         self.drawView.center = self.view.center
     }
 
@@ -38,19 +38,21 @@ class KeyboardViewController: UIInputViewController {
         super.viewDidLoad()
 
         NSLog("Keyboard View Conroller view \(self.view)")
-        
-        // Perform custom UI setup here
-        self.nextKeyboardButton = UIButton.buttonWithType(.System) as UIButton
-        self.nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard!", comment: "Title for 'Next Keyboard' button"), forState: .Normal)
-        self.nextKeyboardButton.sizeToFit()
-        self.nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = false
-        self.nextKeyboardButton.addTarget(self, action: "advanceToNextInputMode", forControlEvents: .TouchUpInside)
-        
-        self.view.addSubview(self.nextKeyboardButton)
-    
-        var nextKeyboardButtonLeftSideConstraint = NSLayoutConstraint(item: self.nextKeyboardButton, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1.0, constant: 0.0)
-        var nextKeyboardButtonBottomConstraint = NSLayoutConstraint(item: self.nextKeyboardButton, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: 7.0)
-        self.view.addConstraints([nextKeyboardButtonLeftSideConstraint, nextKeyboardButtonBottomConstraint])
+		
+		self.nextKeyboardButton = UIButton(type:.System)
+		guard let nextKeyboardButton = self.nextKeyboardButton else {return}
+		
+		nextKeyboardButton.setTitle(NSLocalizedString("Next Keyboard!", comment: "Title for 'Next Keyboard' button"), forState: .Normal)
+		nextKeyboardButton.sizeToFit()
+		nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = false
+		nextKeyboardButton.addTarget(self, action: #selector(UIInputViewController.advanceToNextInputMode), forControlEvents: .TouchUpInside)
+		
+		self.view.addSubview(nextKeyboardButton)
+		
+		let nextKeyboardButtonLeftSideConstraint = NSLayoutConstraint(item: nextKeyboardButton, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1.0, constant: 0.0)
+		let nextKeyboardButtonBottomConstraint = NSLayoutConstraint(item: nextKeyboardButton, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: 7.0)
+		self.view.addConstraints([nextKeyboardButtonLeftSideConstraint, nextKeyboardButtonBottomConstraint])
+	
 
         drawView.frame = CGRectMake(0, 0, 180, 180)
         drawView.backgroundColor = UIColor.darkGrayColor()
@@ -58,24 +60,23 @@ class KeyboardViewController: UIInputViewController {
         drawView.layer.cornerRadius = 5.0
         self.view.addSubview(drawView)
 
-        var drawViewVertConstraint = NSLayoutConstraint(item: self.drawView, attribute: .CenterY, relatedBy: .Equal, toItem: self.drawView.superview, attribute: .CenterY, multiplier: 1.0, constant: 0.0)
+        let drawViewVertConstraint = NSLayoutConstraint(item: self.drawView, attribute: .CenterY, relatedBy: .Equal, toItem: self.drawView.superview, attribute: .CenterY, multiplier: 1.0, constant: 0.0)
 
-        var drawViewHorizConstraint = NSLayoutConstraint(item: self.drawView, attribute: .CenterX, relatedBy: .Equal, toItem: self.nextKeyboardButton.superview, attribute: .CenterX, multiplier: 1.0, constant: 0.0)
+        let drawViewHorizConstraint = NSLayoutConstraint(item: self.drawView, attribute: .CenterX, relatedBy: .Equal, toItem: nextKeyboardButton.superview, attribute: .CenterX, multiplier: 1.0, constant: 0.0)
 
         self.view.addConstraints( [drawViewVertConstraint, drawViewHorizConstraint] )
 
-        var a = CMUnistrokeGestureRecognizer(target: self, action: "gotGesture:" )
+        let a = CMUnistrokeGestureRecognizer(target: self, action: #selector(KeyboardViewController.gotGesture(_:)) )
 
-        var plist = NSBundle.mainBundle().pathForResource("graffiti", ofType: "plist")
-        var dict = NSDictionary(contentsOfFile: plist) // COMPILER BUG: as Dictionary<String, String[]>
-        var keys:[String] = dict.allKeys as [String]
+		guard let plist = NSBundle.mainBundle().pathForResource("graffiti", ofType: "plist") else {return}
+		
+		guard let dict = NSDictionary(contentsOfFile: plist) as? Dictionary<String, [String]> else {return}
         
-        for letter:String in keys {
-            var path = UIBezierPath()
+        for (letter, points) in dict {
+            let path = UIBezierPath()
             var first = true
-            var points = dict[letter] as [String]
             for p in points {
-                var cgp = CGPointFromString(p)
+                let cgp = CGPointFromString(p)
                 if (first) {
                     path.moveToPoint(cgp)
                     first = false
@@ -92,7 +93,7 @@ class KeyboardViewController: UIInputViewController {
     }
 
     func gotGesture( r : CMUnistrokeGestureRecognizer ) {
-        var path = r.strokePath
+        //var path = r.strokePath
         let name = r.result.recognizedStrokeName
         
         print("gotGesture \(name)")
@@ -125,7 +126,7 @@ class KeyboardViewController: UIInputViewController {
         } else {
             textColor = UIColor.blackColor()
         }
-        self.nextKeyboardButton.setTitleColor(textColor, forState: .Normal)
+        self.nextKeyboardButton?.setTitleColor(textColor, forState: .Normal)
     }
 
 }
